@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "b4d7e44f-2f8e-4057-ae17-b15cbbfdf283",
+		"name": "Finerio - Transacciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8244592"
+	},
+	"item": [
+		{
+			"name": "/api/external/authentication/runTest",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "thisismypassword",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/external/authentication/runTest?email=carlosyunca62@gmail.com&password=carlos123yuncaxD",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"external",
+						"authentication",
+						"runTest"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "carlosyunca62@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "carlos123yuncaxD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
