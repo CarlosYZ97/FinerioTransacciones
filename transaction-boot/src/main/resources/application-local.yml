@@ -1,0 +1,47 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: false
+
+amazon:
+  dynamodb:
+    endpoint: dynamodb.us-east-1.amazonaws.com
+  aws:
+    accessKey: AKIAZLBSKZFDKBWHZWPI
+    secretKey: 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
+    region: us-east-1
+
+security:
+  basic:
+    user: admin
+    #password is thisismypassword
+    password: $2a$10$z.OhUnC5o0vk/36BxsK77u1wJLQ4oPdj2NtkfGMF7GViDwAZgWpTu
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+        loggerLevel: FULL
+
+rest:
+  clients:
+    finerio:
+      config:
+        url: https://api.finerio.mx/api
+      services:
+        authentication:
+          uri: /login
+        get-user:
+          uri: /me
+        get-transactions:
+          uri: /users/{idUser}/movements?deep=true&offset={page}&max={limit}&includeCharges=true&includeDeposits=true&includeDuplicates=true
+logging:
+  level:
+    pe.finerio.app.connector.service.apiconnect: DEBUG
+    org.apache.http.wire: DEBUG
+
