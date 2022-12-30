@@ -4,5 +4,5 @@ import pe.finerio.app.user.domain.model.UserInfo;
 
 public interface UserService {
 
-    public UserInfo getUser(String beareToken);
+    UserInfo getUser(String beareToken);
 }

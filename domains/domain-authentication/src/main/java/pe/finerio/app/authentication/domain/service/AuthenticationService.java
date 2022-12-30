@@ -4,5 +4,5 @@ import pe.finerio.app.authentication.domain.model.Authentication;
 import pe.finerio.app.authentication.domain.model.Credential;
 
 public interface AuthenticationService {
-    public Authentication login(Credential  credential);
+     Authentication login(Credential  credential);
 }
